@@ -1,0 +1,51 @@
+{
+    "plugins":[
+        "3-ba",
+        "-sharing",
+        "favicon@^0.0.2",
+        "expandable-chapters",
+        "github",
+        "copy-code-button",
+        "github-buttons@2.1.0",
+        "splitter@^0.0.8",
+        "tbfed-pagefooter",
+        "favicon",
+        "alerts"
+    ],
+    "pluginsConfig": {
+        "3-ba": {
+            "token": "dd407a6f6294639a47d73a050887a82b"
+        },
+        "github": {
+            "url": "https://github.com/SilurianYang/shell-doc"
+        },
+        "github-buttons":{  
+            "repo": "SilurianYang/shell-doc",
+            "types": [
+                "star",
+                "watch",
+                "fork"
+            ],
+            "size":"small"
+        },
+        "favicon": {
+            "shortcut": "/assets/images/favicon.ico",
+            "bookmark":"/assets/images/favicon.ico"
+        },
+        "tbfed-pagefooter": {
+            "copyright":"",
+            "modify_label": "该文件修订时间：",
+            "modify_format": "YYYY-MM-DD HH:mm:ss"
+        }
+    },
+    "links" : {
+        "sidebar" : {
+            "uni-app-tools for Github" : "https://github.com/SilurianYang/shell-doc"
+        }
+    },
+    "styles":{
+        "website":"assets/styles/pulic.css"
+    },
+    "author":"hhyang",
+    "description" : ""
+}

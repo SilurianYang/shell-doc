@@ -110,15 +110,19 @@ ubuntu@VM-0-3-ubuntu:~/bin$
 ## 注意
 如果通过本地编写的sh脚本往服务器上运行，注意回车。window下默认为`/r/n`,服务器上为`/n`
 vscode示例：
-1. 安装 EditorConfig 插件
+1.安装 EditorConfig 插件
+
 <div align=center>
     <img src="../assets/images/editorConfig.png"/>
 </div>
-2. 在当前项目下新建.editorconfig文件 [详细介绍](https://github.com/editorconfig/editorconfig-vscode)
+
+2.在当前项目下新建.editorconfig文件 [详细介绍](https://github.com/editorconfig/editorconfig-vscode)
+
 <div align=center>
     <img src="../assets/images/editorConfig2.png"/>
 </div>
-3. 编写.editorconfig文件
+
+3.编写.editorconfig文件
 ```ruby {.line-numbers}
 #.editorconfig 文件
 
@@ -129,7 +133,8 @@ root = true
 end_of_line = lf
 insert_final_newline = true
 ```
-4. 验证文件是否正确。使用notepad++,，查看所有字符就可以看到了 CRLF。表示`\r\n`,如果仅仅是LF表示`\n`。 设置步骤notepad++,视图，显示符号，显示所有符号。
+
+4.验证文件是否正确。使用notepad++,，查看所有字符就可以看到了 CRLF。表示`\r\n`,如果仅仅是LF表示`\n`。 设置步骤notepad++,视图，显示符号，显示所有符号。
 
 <div align=center>
     <img src="../assets/images/nodepad++.png"/>

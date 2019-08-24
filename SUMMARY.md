@@ -1,7 +1,7 @@
 # Summary
 
 * [前言](README.md)
-* 1.Shell基础
+* Shell基础
     * [1.1. Shell是什么](base/shell1.md)
     * [1.2. Shell是运维人员必须掌握的技能](base/shell2.md)
     * [1.3. 常用的Shell有哪些？](base/shell3.md)
@@ -16,4 +16,6 @@
     * [1.12. Shell四种运行方式（启动方式）精讲](base/shell12.md)
     * [1.13. Shell配置文件（配置脚本）的加载](base/shell13.md)
     * [1.14. 如何编写自己的Shell配置文件（配置脚本）？](base/shell114.md)
+* 附件
+    * [Shell 环境变量一览表](annex/shell1.md)
 

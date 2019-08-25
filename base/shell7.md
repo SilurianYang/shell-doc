@@ -31,7 +31,8 @@ Shell 命令附带选项的例子
 至于在函数内部如何解析这些参数，对于外部命令来说那就是 C/C++ 程序员的工作了，这里不再过多赘述，只给出演示代码。
 
 上节我给大家演示了一个 getsum 程序，本节依然使用该程序演示参数的解析，只是对代码进行了微调。
-```ruby {.line-numbers}
+
+```
 #include <stdio.h>
 #include <unistd.h>
 #include <getopt.h>
@@ -70,7 +71,12 @@ int main(int argc, char *argv[]){
     printf("sum=%d\n", sum);
     return 0;
 }
+
 ```
+
+
+
+
 第 11~20 行是解析参数的关键代码，getopt.h 头文件中的 getopt() 函数是值得重点研究的，有了该函数我们就不用自己去解析参数了，省了很大的力气。
 
 第 27~32 行将接收到的参数打印出来，以便读者更好地观察。

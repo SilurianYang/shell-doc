@@ -3,9 +3,11 @@
 启动 Linux 桌面环境自带的终端模拟包，或者从 Linux 控制台登录后，便可以看到 Shell 命令提示符。看见命令提示符就意味着可以输入命令了。命令提示符不是命令的一部分，它只是起到一个提示作用。
 
 不同的 Linux 发行版使用的提示符格式大同小异，例如在 ubuntu 中，默认的提示符类似下面这样：
-```ruby {.line-numbers}
+
+```ruby
 ubuntu@VM-0-3-ubuntu:~$ 
 ```
+
 各个部分的含义如下：
 * `[]`是提示符的分隔符号，没有特殊含义。
 * `ubuntu`表示当前登录的用户，我现在使用的是 ubuntu 用户登录。
@@ -15,22 +17,22 @@ ubuntu@VM-0-3-ubuntu:~$
 * `$`是命令提示符。Linux 用这个符号标识登录的用户权限等级：如果是超级用户（root 用户），提示符就是`#`；如果是普通用户，提示符就是`$`。
 
 总结起来，Linux Shell 默认的命令提示符的格式为：
-```ruby {.line-numbers}
+```ruby
 [username@host directory]$
 ```
 或者
-```ruby {.line-numbers}
+```ruby
 [username@host directory]#
 ```
 #### 什么是主目录？
 Linux 系统是纯字符界面，用户登录后，要有一个初始登录的位置，这个初始登录位置就称为用户的主目录（home 目录）。超级用户的主目录为/root/，普通用户的主目录为/home/用户名/。
-```ruby {.line-numbers}
+```ruby
 有的资料也称为“家目录”，“家”是 home 的直译，它们都是一个意思。
 ```
 用户在自己的主目录中拥有完整权限，所以我们也建议操作实验可以放在主目录中进行。
 
 我们使用 cd 命令切换一下用户所在目录，看看有什么效果。
-```ruby {.line-numbers}
+```ruby
 ubuntu@VM-0-3-ubuntu:~$ cd /
 ubuntu@VM-0-3-ubuntu:/$ cd etc/acpi/
 ubuntu@VM-0-3-ubuntu:/etc/acpi$ 
@@ -40,7 +42,7 @@ ubuntu@VM-0-3-ubuntu:/etc/acpi$
 ## 第二层命令提示符
 
 有些命令不能在一行内输入完成，需要换行，这个时候就会看到第二层命令提示符。第二层命令提示符默认为`>`，请看下面的例子：
-```ruby {.line-numbers}
+```ruby
 ubuntu@VM-0-3-ubuntu:/etc/acpi$ echo "杨二郎"
 杨二郎
 ubuntu@VM-0-3-ubuntu:/etc/acpi$ echo "

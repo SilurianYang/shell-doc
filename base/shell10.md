@@ -5,7 +5,7 @@
 > 扩展名sh代表 shell，扩展名并不影响脚本执行，见名知意就好，如果你用 js 写 shell 脚本，扩展名就用js好了。
 
 在 test.sh 中输入代码：
-```ruby {.line-numbers}
+```ruby
 #!/bin/bash
 echo "Hello World !"  #这是一条语句
 ```
@@ -16,7 +16,7 @@ echo "Hello World !"  #这是一条语句
 第 2 行的`#`及其后面的内容是注释。Shell 脚本中所有以`#`开头的都是注释（当然以`#!`开头的除外）。写脚本的时候，多写注释是非常有必要的，以方便其他人能看懂你的脚本，也方便后期自己维护时看懂自己的脚本——实际上，即便是自己写的脚本，在经过一段时间后也很容易忘记。
 
 下面给出了一段稍微复杂的 Shell 脚本：
-```ruby {.line-numbers}
+```ruby
 #!/bin/bash
 echo "What is your name?"
 read name

@@ -6,7 +6,7 @@
 在新进程中运行 Shell 脚本有多种方法。
 #### 1) 将 Shell 脚本作为程序运行
 Shell 脚本也是一种解释执行的程序，可以在终端直接调用（需要使用 chmod 命令给 Shell 脚本加上执行权限），如下所示：
-```ruby {.line-numbers}
+```ruby
 ubuntu@VM-0-3-ubuntu:~/bin$ cd demo                #切换到 test.sh 所在的目录
 ubuntu@VM-0-3-ubuntu:~/bin$ chmod +x ./test.sh  #给脚本添加执行权限
 ubuntu@VM-0-3-ubuntu:~/bin$ ./test.sh           #执行脚本文件
@@ -20,13 +20,13 @@ Hello World !                                  #运行结果
 
 #### 2) 将 Shell 脚本作为参数传递给 Bash 解释器
 你也可以直接运行 Bash 解释器，将脚本文件的名字作为参数传递给 Bash，如下所示：
-```ruby {.line-numbers}
+```ruby
 ubuntu@VM-0-3-ubuntu:~/bin$/bin/bash ./test.sh 
 Hello World ! 
 ```
 通过这种方式运行脚本，不需要在脚本文件的第一行指定解释器信息，写了也没用。
 更加简洁的写法是运行 bash 命令。bash 是一个外部命令，Shell 会在 /bin 目录中找到对应的应用程序，也即 /bin/bash，这点我们已在《[Shell命令的本质到底是什么](./shell6.md)》一节中提到。
-```ruby {.line-numbers}
+```ruby
 ubuntu@VM-0-3-ubuntu:~/bin$bash ./test.sh
 Hello World !
 ```
@@ -39,12 +39,12 @@ Hello World !
 Linux 中的每一个进程都有一个唯一的 ID，称为 PID，使用`$$`变量就可以获取当前进程的 PID。$$是 Shell 中的特殊变量，稍后我会在《Shell特殊变量》一节中展开讲解，读者在此不必深究。
 
 首先编写如下的脚本文件，并命名为 `check.sh`：
-```ruby {.line-numbers}
+```ruby
 #!/bin/bash
 echo $$  #输出当前进程PID
 ```
 然后使用以上两种方式来运行 `check.sh`：
-```ruby {.line-numbers}
+```ruby
 ubuntu@VM-0-3-ubuntu:~/bin$echo $$
 28407 #当前进程的PID
 ubuntu@VM-0-3-ubuntu:~/bin$. ./check.sh 
@@ -63,17 +63,17 @@ ubuntu@VM-0-3-ubuntu:~/bin$
 这里需要引入一个新的命令——source 命令。source 是 Shell 内置命令的一种，它会读取脚本文件中的代码，并依次执行所有语句。你也可以理解为，source 命令会强制执行脚本文件中的全部命令，而忽略脚本文件的权限。
 
 source 命令的用法为：
-```ruby {.line-numbers}
+```ruby
 source filename
 ```
 也可以简写为：
-```ruby {.line-numbers}
+```ruby
 . filename
 ```
 两种写法的效果相同。对于第二种写法，注意点号`.`和文件名中间有一个空格。
 
 例如，使用 source 运行上节的 `check.sh`：
-```ruby {.line-numbers}
+```ruby
 ubuntu@VM-0-3-ubuntu:~/bin$source ./check.sh 
 28407
 ubuntu@VM-0-3-ubuntu:~/bin$source check.sh 
@@ -89,7 +89,7 @@ ubuntu@VM-0-3-ubuntu:~/bin$
 ## 检测是否在当前 Shell 进程中
 
 我们仍然借助`$$`变量来输出进程的 PID，如下所示：
-```ruby {.line-numbers}
+```ruby
 ubuntu@VM-0-3-ubuntu:~/bin$echo $$
 28407
 ubuntu@VM-0-3-ubuntu:~/bin$. check.sh 
@@ -123,7 +123,7 @@ vscode示例：
 </div>
 
 3.编写.editorconfig文件
-```ruby {.line-numbers}
+```ruby
 #.editorconfig 文件
 
 root = true

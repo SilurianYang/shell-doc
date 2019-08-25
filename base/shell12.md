@@ -18,7 +18,7 @@ Shell 是一个应用程序，它的一端连接着 Linux 内核，另一端连�
 1) 查看变量-的值，如果值中包含了字母`i`，则表示交互式（interactive）。
 
 【实例1】在 ubuntu 终端下输出-的值：
-```ruby {.line-numbers}
+```ruby
 ubuntu@VM-0-3-ubuntu:~/bin$echo $-
 himBH
 ubuntu@VM-0-3-ubuntu:~/bin$
@@ -26,7 +26,7 @@ ubuntu@VM-0-3-ubuntu:~/bin$
 包含了`i`，为交互式。
 
 【实例2】在 Shell 脚本文件中输出`-`的值：
-```ruby {.line-numbers}
+```ruby
 ubuntu@VM-0-3-ubuntu:~/bin$bash ./test.sh
 hB
 ```
@@ -35,7 +35,7 @@ hB
 2) 查看变量PS1的值，如果非空，则为交互式，否则为非交互式，因为非交互式会清空该变量。
 
 【实例1】在 ubuntu 终端下输出PS1的值：
-```ruby {.line-numbers}
+```ruby
 ubuntu@VM-0-3-ubuntu:~/bin$echo $PS1
 \u@\h:\w$
 ubuntu@VM-0-3-ubuntu:~/bin$
@@ -43,7 +43,7 @@ ubuntu@VM-0-3-ubuntu:~/bin$
 非空，为交互式。
 
 【实例2】在 Shell 脚本文件中输出 PS1 的值：
-```ruby {.line-numbers}
+```ruby
 ubuntu@VM-0-3-ubuntu:~/bin$bash ./test.sh
 
 ```
@@ -56,13 +56,13 @@ ubuntu@VM-0-3-ubuntu:~/bin$bash ./test.sh
 shopt 命令用来查看或设置 Shell 中的行为选项，这些选项可以增强 Shell 的易用性。
 
 【实例1】在 ubuntu 终端下查看 login_shell 选项：
-```ruby {.line-numbers}
+```ruby
 ubuntu@VM-0-3-ubuntu:~/bin$shopt login_shell
 login_shell    	on
 ubuntu@VM-0-3-ubuntu:~/bin$
 ```
 【实例2】在 Shell 脚本文件中查看 login_shel 选项：
-```ruby {.line-numbers}
+```ruby
 ubuntu@VM-0-3-ubuntu:~/bin$bash test.sh 
 login_shell    	off
 ubuntu@VM-0-3-ubuntu:~/bin$
@@ -70,24 +70,24 @@ ubuntu@VM-0-3-ubuntu:~/bin$
 
 ## 同时判断交互式、登录式
 要同时判断是否为交互式和登录式，可以简单使用如下的命令：
-```ruby {.line-numbers}
+```ruby
 echo $PS1; shopt login_shell
 ```
 或者
-```ruby {.line-numbers}
+```ruby
 echo $-; shopt login_shell
 ```
 
 ## 常见的 Shell 启动方式
 1) 通过 Linux 控制台（不是桌面环境自带的终端）或者 ssh 登录 Shell 时（这才是正常登录方式），为交互式的登录 Shell。
-```ruby {.line-numbers}
+```ruby
 ubuntu@VM-0-3-ubuntu:~/bin$echo $PS1;shopt login_shell
 \u@\h:\w$
 login_shell    	on
 ubuntu@VM-0-3-ubuntu:~/bin$
 ```
 2) 执行 bash 命令时默认是非登录的，增加`--login`选项（简写为`-l`）后变成登录式。
-```ruby {.line-numbers}
+```ruby
 ubuntu@VM-0-3-ubuntu:~/bin$bash test.sh 
 login_shell    	off
 ubuntu@VM-0-3-ubuntu:~/bin$bash -l test.sh 
@@ -108,7 +108,7 @@ login_shell    	on
 ubuntu@VM-0-3-ubuntu:~/bin$
 ```
 3) 使用由`()`包围的组命令或者命令替换进入子 Shell 时，子 Shell 会继承父 Shell 的交互和登录属性。
-```ruby {.line-numbers}
+```ruby
 ubuntu@VM-0-3-ubuntu:~/bin$ (echo $PS1;shopt login_shell)
 \[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\u@\h:\w\$
 login_shell    	off
@@ -132,7 +132,7 @@ login_shell    	on
 ubuntu@VM-0-3-ubuntu:~/bin$ 
 ```
 4) ssh 执行远程命令，但不登录时，为非交互非登录式。
-```ruby {.line-numbers}
+```ruby
 ubuntu@VM-0-3-ubuntu:~/bin$ ssh localhost 'echo $PS1;shopt login_shell'
 ubuntu@localhost's password: 
 

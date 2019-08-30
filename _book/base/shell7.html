@@ -1,0 +1,913 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>1.7. Shell命令的选项和参数在本质上到底是什么？ · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="hhyang">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-alerts/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../assets/styles/pulic.css">
+        
+    
+
+        
+    
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="shell8.html" />
+    
+    
+    <link rel="prev" href="shell6.html" />
+    
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"repo":"SilurianYang/shell-doc","types":["star","watch","fork"],"size":"small"};
+    </script>
+
+    
+        <link rel="shortcut icon" href='../assets/images/favicon.ico' type="image/x-icon">
+    
+    
+        <link rel="bookmark" href='../assets/images/favicon.ico' type="image/x-icon">
+    
+    
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://github.com/SilurianYang/shell-doc" target="_blank" class="custom-link">shell-doc for Github</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    前言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    Shell基础
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="shell1.html">
+            
+                <a href="shell1.html">
+            
+                    
+                    1.1. Shell是什么
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="shell2.html">
+            
+                <a href="shell2.html">
+            
+                    
+                    1.2. Shell是运维人员必须掌握的技能
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="shell3.html">
+            
+                <a href="shell3.html">
+            
+                    
+                    1.3. 常用的Shell有哪些？
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="shell4.html">
+            
+                <a href="shell4.html">
+            
+                    
+                    1.4. 进入Shell的两种方式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="shell5.html">
+            
+                <a href="shell5.html">
+            
+                    
+                    1.5. Shell命令的基本格式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="shell6.html">
+            
+                <a href="shell6.html">
+            
+                    
+                    1.6. Shell命令的本质到底是什么？如何自己实现一个命令？
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.7" data-path="shell7.html">
+            
+                <a href="shell7.html">
+            
+                    
+                    1.7. Shell命令的选项和参数在本质上到底是什么？
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="shell8.html">
+            
+                <a href="shell8.html">
+            
+                    
+                    1.8. Linux Shell命令提示符
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9" data-path="shell9.html">
+            
+                <a href="shell9.html">
+            
+                    
+                    1.9. Shell修改命令提示符
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.10" data-path="shell10.html">
+            
+                <a href="shell10.html">
+            
+                    
+                    1.10. 第一个Shell脚本
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.11" data-path="shell11.html">
+            
+                <a href="shell11.html">
+            
+                    
+                    1.11. 执行Shell脚本（多种方法）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.12" data-path="shell12.html">
+            
+                <a href="shell12.html">
+            
+                    
+                    1.12. Shell四种运行方式（启动方式）精讲
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.13" data-path="shell13.html">
+            
+                <a href="shell13.html">
+            
+                    
+                    1.13. Shell配置文件（配置脚本）的加载
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.14" data-path="shell114.html">
+            
+                <a href="shell114.html">
+            
+                    
+                    1.14. 如何编写自己的Shell配置文件（配置脚本）？
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    Shell编程
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../program/shell1.html">
+            
+                <a href="../program/shell1.html">
+            
+                    
+                    2.1. Shell变量
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../program/shell2.html">
+            
+                <a href="../program/shell2.html">
+            
+                    
+                    2.2. Shell变量的作用域（精讲）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../program/shell3.html">
+            
+                <a href="../program/shell3.html">
+            
+                    
+                    2.3. Shell命令替换
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../program/shell4.html">
+            
+                <a href="../program/shell4.html">
+            
+                    
+                    2.4. Shell位置参数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../program/shell5.html">
+            
+                <a href="../program/shell5.html">
+            
+                    
+                    2.5. Shell特殊变量
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="../program/shell6.html">
+            
+                <a href="../program/shell6.html">
+            
+                    
+                    2.6. Shell $*和$@之间的区别
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="../program/shell7.html">
+            
+                <a href="../program/shell7.html">
+            
+                    
+                    2.7. Shell $?
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="../program/shell8.html">
+            
+                <a href="../program/shell8.html">
+            
+                    
+                    2.8. Shell字符串详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9" data-path="../program/shell9.html">
+            
+                <a href="../program/shell9.html">
+            
+                    
+                    2.9. Shell字符串拼接
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.10" data-path="../program/shell10.html">
+            
+                <a href="../program/shell10.html">
+            
+                    
+                    2.10. Shell字符串截取
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.11" data-path="../program/shell11.html">
+            
+                <a href="../program/shell11.html">
+            
+                    
+                    2.11. Shell数组
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.12" data-path="../program/shell12.html">
+            
+                <a href="../program/shell12.html">
+            
+                    
+                    2.12. Shell获取数组长度
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.13" data-path="../program/shell13.html">
+            
+                <a href="../program/shell13.html">
+            
+                    
+                    2.13. Shell数组拼接
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.14" data-path="../program/shell14.html">
+            
+                <a href="../program/shell14.html">
+            
+                    
+                    2.14. Shell删除数组元素
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.15" data-path="../program/shell15.html">
+            
+                <a href="../program/shell15.html">
+            
+                    
+                    2.15. Shell关联数组
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.16" data-path="../program/shell16.html">
+            
+                <a href="../program/shell16.html">
+            
+                    
+                    2.16. Shell内建命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.17" data-path="../program/shell17.html">
+            
+                <a href="../program/shell17.html">
+            
+                    
+                    2.17. Shell alias命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.18" data-path="../program/shell18.html">
+            
+                <a href="../program/shell18.html">
+            
+                    
+                    2.18. Shell echo命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.19" data-path="../program/shell19.html">
+            
+                <a href="../program/shell19.html">
+            
+                    
+                    2.19. Shell read命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.20" data-path="../program/shell20.html">
+            
+                <a href="../program/shell20.html">
+            
+                    
+                    2.20. Shell exit命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.21" data-path="../program/shell21.html">
+            
+                <a href="../program/shell21.html">
+            
+                    
+                    2.21. Shell declare和typeset命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.22" data-path="../program/shell22.html">
+            
+                <a href="../program/shell22.html">
+            
+                    
+                    2.22. Shell数学计算
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.23" data-path="../program/shell23.html">
+            
+                <a href="../program/shell23.html">
+            
+                    
+                    2.23. Shell (())
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    附件
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../annex/shell1.html">
+            
+                <a href="../annex/shell1.html">
+            
+                    
+                    Shell 环境变量一览表
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >1.7. Shell命令的选项和参数在本质上到底是什么？</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="17-shell&#x547D;&#x4EE4;&#x7684;&#x9009;&#x9879;&#x548C;&#x53C2;&#x6570;&#x5728;&#x672C;&#x8D28;&#x4E0A;&#x5230;&#x5E95;&#x662F;&#x4EC0;&#x4E48;&#xFF1F;">1.7. Shell&#x547D;&#x4EE4;&#x7684;&#x9009;&#x9879;&#x548C;&#x53C2;&#x6570;&#x5728;&#x672C;&#x8D28;&#x4E0A;&#x5230;&#x5E95;&#x662F;&#x4EC0;&#x4E48;&#xFF1F;</h1>
+<p>&#x5F88;&#x591A; Shell &#x547D;&#x4EE4;&#x90FD;&#x662F;&#x53EF;&#x4EE5;&#x9644;&#x5E26;&#x9009;&#x9879;&#x548C;&#x53C2;&#x6570;&#x7684;&#xFF0C;&#x4E0D;&#x540C;&#x7684;&#x9009;&#x9879;&#x548C;&#x53C2;&#x6570;&#x4E5F;&#x4F7F;&#x5F97;&#x547D;&#x4EE4;&#x7684;&#x529F;&#x80FD;&#x7EC6;&#x8282;&#x6709;&#x6240;&#x5DEE;&#x5F02;&#x3002;</p>
+<p>Shell &#x547D;&#x4EE4;&#x9644;&#x5E26;&#x53C2;&#x6570;&#x7684;&#x4F8B;&#x5B50;&#xFF1A;</p>
+<ul>
+<li><code>cd demo</code>&#x547D;&#x4EE4;&#x8868;&#x793A;&#x8FDB;&#x5165;&#x5F53;&#x524D;&#x76EE;&#x5F55;&#x4E0B;&#x7684; demo &#x76EE;&#x5F55;&#xFF0C;&#x5176;&#x4E2D;<code>demo</code>&#x5C31;&#x662F; cd &#x547D;&#x4EE4;&#x7684;&#x53C2;&#x6570;&#x3002;</li>
+<li><code>echo &quot;&#x6768;&#x4E8C;&#x90CE;&quot;</code>&#x547D;&#x4EE4;&#x8868;&#x793A;&#x8F93;&#x51FA;&#x5B57;&#x7B26;&#x4E32;&#x5E76;&#x6362;&#x884C;&#xFF0C;&#x5176;&#x4E2D;<code>&quot;&#x6768;&#x4E8C;&#x90CE;&quot;</code>&#x5C31;&#x662F; echo &#x547D;&#x4EE4;&#x7684;&#x53C2;&#x6570;&#x3002;</li>
+</ul>
+<p>Shell &#x547D;&#x4EE4;&#x9644;&#x5E26;&#x9009;&#x9879;&#x7684;&#x4F8B;&#x5B50;
+<code>ls -l</code>&#x547D;&#x4EE4;&#x7528;&#x6765;&#x663E;&#x793A;&#x5F53;&#x524D;&#x76EE;&#x5F55;&#x4E0B;&#x7684;&#x6240;&#x6709;&#x6587;&#x4EF6;&#x4EE5;&#x53CA;&#x5B83;&#x4EEC;&#x7684;&#x8BE6;&#x7EC6;&#x4FE1;&#x606F;&#xFF0C;&#x5176;&#x4E2D;<code>-l</code>&#x5C31;&#x662F; ls &#x547D;&#x4EE4;&#x7684;&#x9009;&#x9879;&#x3002;
+<code>echo -n &quot;&#x6768;&#x4E8C;&#x90CE;&quot;</code>&#x8868;&#x793A;&#x5728;&#x8F93;&#x51FA;&#x5B57;&#x7B26;&#x4E32;&#x540E;&#x4E0D;&#x6362;&#x884C;&#xFF0C;&#x5176;&#x4E2D;<code>-n</code>&#x662F; echo &#x547D;&#x4EE4;&#x7684;&#x9009;&#x9879;&#xFF0C;<code>&quot;&#x6768;&#x4E8C;&#x90CE;&quot;</code>&#x662F; echo &#x547D;&#x4EE4;&#x7684;&#x53C2;&#x6570;&#x3002;</p>
+<p>&#x6709;&#x4E9B;&#x547D;&#x4EE4;&#x7684;&#x9009;&#x9879;&#x540E;&#x9762;&#x4E5F;&#x53EF;&#x4EE5;&#x9644;&#x5E26;&#x53C2;&#x6570;&#xFF1A;</p>
+<ul>
+<li><code>getsum -s 1 -e 100</code>&#x547D;&#x4EE4;&#x7528;&#x6765;&#x8BA1;&#x7B97;&#x4ECE; 1 &#x7D2F;&#x52A0;&#x5230; 100 &#x7684;&#x548C;&#xFF0C;&#x5176;&#x4E2D;<code>-s</code>&#x548C;<code>-e</code>&#x662F; getsum &#x547D;&#x4EE4;&#x7684;&#x9009;&#x9879;&#xFF0C;<code>1</code>&#x548C;<code>100</code>&#x5206;&#x522B;&#x662F;<code>-s</code>&#x548C;<code>-e</code>&#x9009;&#x9879;&#x7684;&#x53C2;&#x6570;&#x3002;</li>
+<li><code>read -n 1 sex</code>&#x547D;&#x4EE4;&#x7528;&#x6765;&#x8BFB;&#x53D6;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x5E76;&#x8D4B;&#x503C;&#x7ED9; sex &#x53D8;&#x91CF;&#xFF0C;&#x5176;&#x4E2D;<code>-n</code>&#x662F; read &#x547D;&#x4EE4;&#x7684;&#x9009;&#x9879;&#xFF0C;<code>1</code>&#x662F;<code>-n</code>&#x9009;&#x9879;&#x7684;&#x53C2;&#x6570;&#xFF0C;<code>sex</code>&#x662F; read &#x547D;&#x4EE4;&#x7684;&#x53C2;&#x6570;&#x3002;</li>
+</ul>
+<p>&#x4F60;&#x662F;&#x5426;&#x5BF9;&#x8FD9;&#x4E9B;&#x5F62;&#x5F62;&#x8272;&#x8272;&#x7684;&#x9009;&#x9879;&#x548C;&#x53C2;&#x6570;&#x611F;&#x5230;&#x597D;&#x5947;&#xFF1F;&#x4F60;&#x662F;&#x5426;&#x60F3;&#x77E5;&#x9053;&#x5B83;&#x4EEC;&#x5728;&#x5E95;&#x5C42;&#x662F;&#x5982;&#x4F55;&#x5B9E;&#x73B0;&#x7684;&#xFF1F;&#x4F60;&#x662F;&#x5426;&#x4E5F;&#x60F3;&#x81EA;&#x5DF1;&#x52A8;&#x624B;&#x5BF9;&#x5B83;&#x4EEC;&#x8FDB;&#x884C;&#x89E3;&#x6790;&#xFF1F;&#x672C;&#x8282;&#x5C31;&#x6765;&#x7ED9;&#x4F60;&#x63ED;&#x6653;&#x7B54;&#x6848;&#xFF01;</p>
+<p>&#x4E0A;&#x8282;&#x6211;&#x4EEC;&#x8BB2;&#x5230;&#xFF0C;&#x4E00;&#x4E2A; Shell &#x5185;&#x7F6E;&#x547D;&#x4EE4;&#x5C31;&#x662F;&#x4E00;&#x4E2A;&#x5185;&#x90E8;&#x7684;&#x51FD;&#x6570;&#xFF0C;&#x4E00;&#x4E2A;&#x5916;&#x90E8;&#x547D;&#x4EE4;&#x5C31;&#x662F;&#x4E00;&#x4E2A;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x3002;&#x5185;&#x7F6E;&#x547D;&#x4EE4;&#x540E;&#x9762;&#x9644;&#x5E26;&#x7684;&#x6240;&#x6709;&#x6570;&#x636E;&#xFF08;&#x6240;&#x6709;&#x9009;&#x9879;&#x548C;&#x53C2;&#x6570;&#xFF09;&#x6700;&#x7EC8;&#x90FD;&#x4EE5;&#x53C2;&#x6570;&#x7684;&#x5F62;&#x5F0F;&#x4F20;&#x9012;&#x7ED9;&#x4E86;&#x51FD;&#x6570;&#xFF0C;&#x5916;&#x90E8;&#x547D;&#x4EE4;&#x540E;&#x9762;&#x9644;&#x5E26;&#x7684;&#x6240;&#x6709;&#x6570;&#x636E;&#xFF08;&#x6240;&#x6709;&#x9009;&#x9879;&#x548C;&#x53C2;&#x6570;&#xFF09;&#x6700;&#x7EC8;&#x90FD;&#x4EE5;&#x53C2;&#x6570;&#x7684;&#x5F62;&#x5F0F;&#x4F20;&#x9012;&#x7ED9;&#x4E86;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x3002;</p>
+<p>&#x4E5F;&#x5C31;&#x662F;&#x8BF4;&#xFF0C;&#x4E0D;&#x7BA1;&#x662F;&#x5185;&#x7F6E;&#x547D;&#x4EE4;&#x8FD8;&#x662F;&#x5916;&#x90E8;&#x547D;&#x4EE4;&#xFF0C;&#x5B83;&#x540E;&#x9762;&#x9644;&#x5E26;&#x7684;&#x6240;&#x6709;&#x6570;&#x636E;&#x90FD;&#x4F1A;&#x88AB;&#x201C;&#x6253;&#x5305;&#x201D;&#x6210;&#x53C2;&#x6570;&#xFF0C;&#x8FD9;&#x4E9B;&#x53C2;&#x6570;&#x6709;&#x7684;&#x4F20;&#x9012;&#x7ED9;&#x4E86;&#x51FD;&#x6570;&#xFF0C;&#x6709;&#x7684;&#x4F20;&#x9012;&#x7ED9;&#x4E86;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x3002;</p>
+<p>&#x6709;&#x7F16;&#x7A0B;&#x7ECF;&#x9A8C;&#x7684;&#x8BFB;&#x8005;&#x5E94;&#x8BE5;&#x77E5;&#x9053;&#xFF0C;C&#x8BED;&#x8A00;&#x6216;&#x8005; C++ &#x7A0B;&#x5E8F;&#x7684;&#x5165;&#x53E3;&#x51FD;&#x6570;&#x662F;<code>int main(int argc, char *argv[])</code>&#xFF0C;&#x4F20;&#x9012;&#x7ED9;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x7684;&#x53C2;&#x6570;&#x6700;&#x7EC8;&#x90FD;&#x88AB; main &#x51FD;&#x6570;&#x63A5;&#x6536;&#x4E86;&#x3002;&#x4ECE;&#x8FD9;&#x4E2A;&#x89D2;&#x5EA6;&#x770B;&#xFF0C;&#x4F20;&#x9012;&#x7ED9;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x7684;&#x53C2;&#x6570;&#x5176;&#x5B9E;&#x4E5F;&#x662F;&#x4F20;&#x9012;&#x7ED9;&#x4E86;&#x51FD;&#x6570;&#x3002;</p>
+<p>&#x6709;&#x4E86;&#x4EE5;&#x4E0A;&#x8BA4;&#x77E5;&#xFF0C;&#x6211;&#x4EEC;&#x5C31;&#x4E0D;&#x7528;&#x518D;&#x533A;&#x5206;&#x51FD;&#x6570;&#x548C;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x4E86;&#xFF0C;&#x6211;&#x4EEC;&#x5C31;&#x8BA4;&#x4E3A;&#xFF1A;<strong>&#x4E0D;&#x7BA1;&#x662F;&#x5185;&#x7F6E;&#x547D;&#x4EE4;&#x8FD8;&#x662F;&#x5916;&#x90E8;&#x547D;&#x4EE4;&#xFF0C;&#x5B83;&#x540E;&#x9762;&#x9644;&#x5E26;&#x7684;&#x6570;&#x636E;&#x6700;&#x7EC8;&#x90FD;&#x4EE5;&#x53C2;&#x6570;&#x7684;&#x5F62;&#x5F0F;&#x4F20;&#x9012;&#x7ED9;&#x4E86;&#x51FD;&#x6570;</strong>&#x3002;&#x5B9E;&#x73B0;&#x4E00;&#x4E2A;&#x547D;&#x4EE4;&#x7684;&#x4E00;&#x9879;&#x91CD;&#x8981;&#x5DE5;&#x4F5C;&#x5C31;&#x662F;&#x89E3;&#x6790;&#x4F20;&#x9012;&#x7ED9;&#x51FD;&#x6570;&#x7684;&#x53C2;&#x6570;&#x3002;</p>
+<p>&#x6CE8;&#x610F;&#xFF0C;&#x547D;&#x4EE4;&#x540E;&#x9762;&#x9644;&#x5E26;&#x7684;&#x6570;&#x636E;&#x5E76;&#x4E0D;&#x662F;&#x88AB;&#x5408;&#x5E76;&#x5728;&#x4E00;&#x8D77;&#xFF0C;&#x4F5C;&#x4E3A;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#x4F20;&#x9012;&#x7ED9;&#x51FD;&#x6570;&#x7684;&#xFF1B;&#x8FD9;&#x4E9B;&#x6570;&#x636E;&#x662F;&#x7531;&#x7A7A;&#x683C;&#x5206;&#x9694;&#x7684;&#xFF0C;&#x5B83;&#x4EEC;&#x88AB;&#x5206;&#x9694;&#x6210;&#x4E86;&#x51E0;&#x4EFD;&#xFF0C;&#x5C31;&#x4F1A;&#x8F6C;&#x6362;&#x6210;&#x51E0;&#x4E2A;&#x53C2;&#x6570;&#x3002;&#x4F8B;&#x5982;<code>getsum -s 1 -e 100</code>&#x8981;&#x5411;&#x51FD;&#x6570;&#x4F20;&#x9012;&#x56DB;&#x4E2A;&#x53C2;&#x6570;&#xFF0C;<code>read -n 1 sex</code>&#x8981;&#x5411;&#x51FD;&#x6570;&#x4E2D;&#x4F20;&#x9012;&#x4E09;&#x4E2A;&#x53C2;&#x6570;&#x3002;</p>
+<p>&#x5E76;&#x4E14;&#xFF0C;&#x547D;&#x4EE4;&#x540E;&#x9762;&#x9644;&#x5E26;&#x7684;&#x6570;&#x636E;&#x90FD;&#x662F;&#x201C;&#x539F;&#x6C41;&#x539F;&#x5473;&#x201D;&#x5730;&#x4F20;&#x9012;&#x7ED9;&#x4E86;&#x51FD;&#x6570;&#xFF0C;&#x6BD4;&#x5982;<code>getsum -s 1 -e 100</code>&#x8981;&#x4F20;&#x9012;&#x7684;&#x56DB;&#x4E2A;&#x53C2;&#x6570;&#x5206;&#x522B;&#x662F; -s&#x3001;1&#x3001;-e&#x3001;100&#xFF0C;&#x51CF;&#x53F7;<code>-</code>&#x4E5F;&#x4F1A;&#x4E00;&#x8D77;&#x4F20;&#x9012;&#x8FC7;&#x53BB;&#xFF0C;&#x5728;&#x51FD;&#x6570;&#x5185;&#x90E8;&#xFF0C;&#x51CF;&#x53F7;<code>-</code>&#x53EF;&#x4EE5;&#x7528;&#x6765;&#x533A;&#x5206;&#x8BE5;&#x53C2;&#x6570;&#x662F;&#x5426;&#x662F;&#x547D;&#x4EE4;&#x7684;&#x9009;&#x9879;&#x3002;</p>
+<p>&#x81F3;&#x4E8E;&#x5728;&#x51FD;&#x6570;&#x5185;&#x90E8;&#x5982;&#x4F55;&#x89E3;&#x6790;&#x8FD9;&#x4E9B;&#x53C2;&#x6570;&#xFF0C;&#x5BF9;&#x4E8E;&#x5916;&#x90E8;&#x547D;&#x4EE4;&#x6765;&#x8BF4;&#x90A3;&#x5C31;&#x662F; C/C++ &#x7A0B;&#x5E8F;&#x5458;&#x7684;&#x5DE5;&#x4F5C;&#x4E86;&#xFF0C;&#x8FD9;&#x91CC;&#x4E0D;&#x518D;&#x8FC7;&#x591A;&#x8D58;&#x8FF0;&#xFF0C;&#x53EA;&#x7ED9;&#x51FA;&#x6F14;&#x793A;&#x4EE3;&#x7801;&#x3002;</p>
+<p>&#x4E0A;&#x8282;&#x6211;&#x7ED9;&#x5927;&#x5BB6;&#x6F14;&#x793A;&#x4E86;&#x4E00;&#x4E2A; getsum &#x7A0B;&#x5E8F;&#xFF0C;&#x672C;&#x8282;&#x4F9D;&#x7136;&#x4F7F;&#x7528;&#x8BE5;&#x7A0B;&#x5E8F;&#x6F14;&#x793A;&#x53C2;&#x6570;&#x7684;&#x89E3;&#x6790;&#xFF0C;&#x53EA;&#x662F;&#x5BF9;&#x4EE3;&#x7801;&#x8FDB;&#x884C;&#x4E86;&#x5FAE;&#x8C03;&#x3002;</p>
+<pre><code>#include &lt;stdio.h&gt;
+#include &lt;unistd.h&gt;
+#include &lt;getopt.h&gt;
+#include &lt;stdlib.h&gt;
+int main(int argc, char *argv[]){
+    int start = 0;
+    int end = 0;
+    int sum = 0;
+    int opt;
+    char *optstring = &quot;:s:e:&quot;;
+    //&#x5206;&#x6790;&#x63A5;&#x6536;&#x5230;&#x7684;&#x53C2;&#x6570;
+    while((opt = getopt(argc, argv, optstring))!= -1){
+        switch(opt){
+            case &apos;s&apos;: start = atoi(optarg); break;
+            case &apos;e&apos;: end = atoi(optarg); break;
+            case &apos;:&apos;: puts(&quot;Missing parameter&quot;); exit(1);
+        }
+    }
+
+    //&#x68C0;&#x6D4B;&#x53C2;&#x6570;&#x662F;&#x5426;&#x6709;&#x6548;
+    if(start&lt;0 || end&lt;=start){
+        puts(&quot;Parameter error&quot;); exit(2);
+    }
+
+    //&#x6253;&#x5370;&#x63A5;&#x6536;&#x5230;&#x7684;&#x53C2;&#x6570;
+    printf(&quot;Received parameters: &quot;);
+    for(int i=0; i&lt;argc; i++){
+        printf(&quot;%s  &quot;, argv[i]);
+    }
+    printf(&quot;\n&quot;);
+
+    //&#x8BA1;&#x7B97;&#x7D2F;&#x52A0;&#x7684;&#x548C;
+    for(int i=start; i&lt;=end; i++){
+        sum+=i;
+    }
+    printf(&quot;sum=%d\n&quot;, sum);
+    return 0;
+}
+</code></pre><p>&#x7B2C; 11~20 &#x884C;&#x662F;&#x89E3;&#x6790;&#x53C2;&#x6570;&#x7684;&#x5173;&#x952E;&#x4EE3;&#x7801;&#xFF0C;getopt.h &#x5934;&#x6587;&#x4EF6;&#x4E2D;&#x7684; getopt() &#x51FD;&#x6570;&#x662F;&#x503C;&#x5F97;&#x91CD;&#x70B9;&#x7814;&#x7A76;&#x7684;&#xFF0C;&#x6709;&#x4E86;&#x8BE5;&#x51FD;&#x6570;&#x6211;&#x4EEC;&#x5C31;&#x4E0D;&#x7528;&#x81EA;&#x5DF1;&#x53BB;&#x89E3;&#x6790;&#x53C2;&#x6570;&#x4E86;&#xFF0C;&#x7701;&#x4E86;&#x5F88;&#x5927;&#x7684;&#x529B;&#x6C14;&#x3002;</p>
+<p>&#x7B2C; 27~32 &#x884C;&#x5C06;&#x63A5;&#x6536;&#x5230;&#x7684;&#x53C2;&#x6570;&#x6253;&#x5370;&#x51FA;&#x6765;&#xFF0C;&#x4EE5;&#x4FBF;&#x8BFB;&#x8005;&#x66F4;&#x597D;&#x5730;&#x89C2;&#x5BDF;&#x3002; </p>
+<footer class="page-footer"><span class="copyright">powered by Gitbook</span><span class="footer-modification">&#x8BE5;&#x6587;&#x4EF6;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
+2019-08-26 11:22:52
+</span></footer>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="shell6.html" class="navigation navigation-prev " aria-label="Previous page: 1.6. Shell命令的本质到底是什么？如何自己实现一个命令？">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="shell8.html" class="navigation navigation-next " aria-label="Next page: 1.8. Linux Shell命令提示符">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"1.7. Shell命令的选项和参数在本质上到底是什么？","level":"1.2.7","depth":2,"next":{"title":"1.8. Linux Shell命令提示符","level":"1.2.8","depth":2,"path":"base/shell8.md","ref":"base/shell8.md","articles":[]},"previous":{"title":"1.6. Shell命令的本质到底是什么？如何自己实现一个命令？","level":"1.2.6","depth":2,"path":"base/shell6.md","ref":"base/shell6.md","articles":[]},"dir":"ltr"},"config":{"plugins":["3-ba","-sharing","favicon@^0.0.2","expandable-chapters","github","copy-code-button","github-buttons@2.1.0","splitter@^0.0.8","tbfed-pagefooter","favicon","alerts","livereload"],"styles":{"website":"assets/styles/pulic.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"","modify_label":"该文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"github":{"url":"https://github.com/SilurianYang/shell-doc"},"livereload":{},"splitter":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"favicon":{"shortcut":"/assets/images/favicon.ico","bookmark":"/assets/images/favicon.ico"},"alerts":{},"github-buttons":{"repo":"SilurianYang/shell-doc","types":["star","watch","fork"],"size":"small"},"3-ba":{"configuration":"auto","token":"dd407a6f6294639a47d73a050887a82b"},"copy-code-button":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","author":"hhyang","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"links":{"sidebar":{"shell-doc for Github":"https://github.com/SilurianYang/shell-doc"}},"gitbook":"*","description":""},"file":{"path":"base/shell7.md","mtime":"2019-08-26T03:22:52.351Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-08-30T09:54:18.693Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-3-ba/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-alerts/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
